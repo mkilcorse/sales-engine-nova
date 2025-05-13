@@ -1,7 +1,20 @@
 // Simplified Form Handler
 
-window.onload = function () {
+
     const form = document.getElementById("sales-rep-submit");
+    
+if (form && !form.dataset.listenerAttached) {
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent default form submission
+        await sendForm(); // Call the async function to handle the form submission
+        event.target.reset(); // Reset the form after submission
+    });
+
+    // Mark the form to indicate the listener is attached
+    form.dataset.listenerAttached = true;
+} else if (!form) {
+    console.error("Form element not found!");
+}
 
     const sendForm = async () => {
         // Collect form data manually
@@ -23,7 +36,7 @@ window.onload = function () {
 
         try {
             // Send the form data to the server as JSON
-            const response = await fetch('https://us-central1-soprema-sales-input.cloudfunctions.net/submitForm', {
+            const response = await fetch('https://api-lvu3rvyduq-uc.a.run.app/submitForm', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -47,14 +60,3 @@ window.onload = function () {
         }
     };
 
-    if (form) {
-        // Attach the submit event listener to the form
-        form.addEventListener("submit", (event) => {
-            event.preventDefault(); // Prevent the default form submission
-            event.target.reset(); // Reset the form fields
-            sendForm(); // Call the async function to handle the form submission
-        });
-    } else {
-        console.error("Form element not found!");
-    }
-};

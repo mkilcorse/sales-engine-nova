@@ -25,6 +25,10 @@
     ],
     "rewrites": [
       {
+        "source": "**/submitForm",
+        "function": "app"
+      },
+      {
         "source": "**/index.html",
         "destination": "/index.html"
       },
