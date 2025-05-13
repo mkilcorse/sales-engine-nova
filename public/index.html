@@ -1,89 +1,145 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Sales Representitive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h1>Add Collaborator</h1>
+    <form id="sales-rep-submit">
+        <label for="submitter-name">Your Name:</label>
+        <input type="text" id="submitter-name" name="submitter-name" required>
+        <br><br>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.7.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.7.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.7.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+        <label for="company">Company:</label>
+        <select id="company" name="company" required>
+            <option value="SOPREMA">SOPREMA</option>
+            <option value="Chem Link">Chem Link</option>
+            <option value="PRS">Performance Roof Systems</option>
+            <option value="TRP">TRP</option>
+        </select>
+        <br><br>
+        
+        <label for="collaborator-first-name">Collaborator First Name:</label>
+        <input type="text" id="collaborator-first-name" name="collaborator-first-name" required>
+        <br><br>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+        <label for="collaborator-last-name">Collaborator Last Name:</label>
+        <input type="text" id="collaborator-last-name" name="collaborator-last-name" required>
+        <br><br>
+
+        <label for="collaborator-title">Collaborator Title:</label>
+        <select id="collaborator-title" name="collaborator-title" required>
+            <option value="ISA">Independent Sales Asssociate</option>
+            <option value="REP">Sales Representitive</option>
+            <option value="ISA">District Sales Manager</option>
+            <option value="RSM">Regional Sales Manager</option>
+        </select>
+        <br><br>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="TECH">TECH</option>
+            <option value="SALES">SALES</option>
+        </select>
+        <br><br>
+ 
+        <label for="region">Region:</label>
+        <select id="region" name="region" required>
+            <option value="Northeast">Northeast Region</option>
+            <option value="North Central">North Central Region</option>
+            <option value="Northwest">Northwest Region</option>
+            <option value="Southwest">Southwest Region</option>
+            <option value="South Central">South Central Region</option>
+            <option value="Southeast">Southeast Region</option>
+            <option value="Florida & Puerto Rico">Florida & Puerto Rico Region</option>
+        </select>
+        <br><br>
+
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district" required>
+        <br><br>
+        
+        <label for="territory">Territory:</label>
+        <input type="text" id="territory" name="territory" required>
+        <br><br>
+
+        <label for="home-zip">Home Zip Code:</label>
+        <input type="text" id="home-zip" name="home-zip" required>
+        <br><br>
+
+        <label for="home-state">Home State:</label>
+        <select id="home-state" name="home-state" required>
+         	<option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+            <option value="PR">Puerto Rico</option>
+        </select>
+        <br><br>
+
+        <label for="reports-to">Reports to:</label>
+        <input type="text" id="reports-to" name="reports-to" required></input>
+        <br><br>
+        
+        <label for="notes">Note:</label>
+        <textarea id="notes" name="notes" rows="4" cols="30"></textarea>
+        <br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+        <script src="./index.js" defer></script>
+</body>
 </html>
