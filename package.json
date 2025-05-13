@@ -1,0 +1,19 @@
+{
+  "name": "sales-engine-nova",
+  "version": "1.0.0",
+  "description": "A sales department human resource registry service that will collect, aggrigate, and visualize our sales and technical assets across the company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkilcorse/sales-engine-nova.git"
+  },
+  "author": "Mick Kilcorse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkilcorse/sales-engine-nova/issues"
+  },
+  "homepage": "https://github.com/mkilcorse/sales-engine-nova#readme"
+}
