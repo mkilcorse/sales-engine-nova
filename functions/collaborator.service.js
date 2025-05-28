@@ -21,7 +21,10 @@ class CollaboratorWorker {
     async addCollaborator(collaborator){
         console.log("Adding collaborator: ", collaborator);
         collaborator.createTimestamp = new Date();
-        const response = await this.#DB.collection(this.#COLLECTION).doc(collaborator.collaboratorName).set(
+        const response = await this.#DB.collection(this.#COLLECTION)
+        const validateDoc = response.where(irebase.firestore.FieldPath.documentId(), '==', collaborator.collaboratorName).get();
+        if(validateDoc.empty){
+            response.doc(collaborator.collaboratorName).set(
             collaborator
         ).then(() => {
             return console.log({result: `Form data saved under: ${collaborator.collaboratorName}`});
@@ -31,6 +34,12 @@ class CollaboratorWorker {
             return console.log({error: "Error adding document " + collaborator});
         });
 
+        } else {
+            console.log("This collaborator already exists!");
+            return console.log({error: "Document already exists"});
+        }
+        
+        
 
     }
     async updateCollaborator(collaborator, res){

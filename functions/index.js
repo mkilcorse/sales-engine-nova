@@ -21,7 +21,7 @@ app.post("/submitForm", async (req, res) => {
         const collab = {
             submitterName: txtData.submitterName,
             company: txtData.company,
-            collaboratorName: String(txtData.collaboratorFirstName + " " + txtData.collaboratorLastName).toUpperCase(),
+            collaboratorName: String(txtData.collaboratorFirstName + " " + txtData.collaboratorLastName).toUpperCase().trim(),
             collaboratorDepartment: txtData.collaboratorDepartment,
             collaboratorTitle: txtData.collaboratorTitle,
             region: txtData["region"],
