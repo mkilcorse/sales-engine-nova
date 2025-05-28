@@ -35,6 +35,19 @@ label {
     color: #555555;
 }
 
+
+  
+
+#form-type-list{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+ul li label{
+    display: inline-flex;
+    align-items: center;
+}
+
 input, select, textarea {
     width: 100%;
     padding: 10px;

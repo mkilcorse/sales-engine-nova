@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Collaborator</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Submit Sales Representitive</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
     <div class="form-container">
-        <h1>Add Collaborator</h1>
+        <h1>National Sales & Technical Map Update Form</h1>
     <form id="sales-rep-submit">
         <label for="submitter-name">Your Name:</label>
         <input type="text" id="submitter-name" name="submitter-name" required>
+        <br><br>
+        
+        <ul id="form-type-list">
+            <li>
+                <label for="form-type">Add a Collaborator</label>
+                <input type="radio" id="add" name="form-type" value="add" required>
+            </li>
+            <li>
+                <label for="form-type">Update a Collaborator</label>
+                <input type="radio" id="update" name="form-type" value="update" required>
+            </li>
+            <li>
+                <label for="form-type">Remove a Collaborator</label>
+                <input type="radio" id="delete" name="form-type" value="delete" required>
+            </li>    
+        </ul>
         <br><br>
 
         <label for="company">Company:</label>
@@ -43,8 +59,8 @@
 
         <label for="department">Department:</label>
         <select id="department" name="department" required>
-            <option value="SALES">SALES</option>
             <option value="TECH">TECH</option>
+            <option value="SALES">SALES</option>
         </select>
         <br><br>
  
@@ -69,7 +85,7 @@
         <br><br>
 
         <label for="home-zip">Home Zip Code:</label>
-        <input type="text" id="home-zip" name="home-zip" required>
+        <input type="text" pattern="[0-9]{5}" id="home-zip" name="home-zip" required>
         <br><br>
 
         <label for="home-state">Home State:</label>
@@ -140,6 +156,6 @@
         <button type="submit">Submit</button>
     </form>
     </div>
-        <script defer src="/index.js"></script>
+        <script src="./index.js" defer></script>
 </body>
 </html>

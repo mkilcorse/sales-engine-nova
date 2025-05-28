@@ -33,7 +33,7 @@
         "destination": "/index.html"
       },
       {
-        "source": "**/style.css",
+        "source": "**/styles.css",
         "destination": "/css/styles.css"
       },
       {
